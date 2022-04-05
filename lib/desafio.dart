@@ -7,7 +7,7 @@ void main() async {
   var estadoRepository = EstadoRepository();
   var cidadeRepository = CidadeRepository();
   List<Estado> estado = await estadoRepository.pegarEstados();
-  //estadoRepository.insertEstados(estado);
+  estadoRepository.insertEstados(estado);
   List<int> idsDosEstados = await estadoRepository.pegarIdsEstados();
   List<Cidade> todasAsCidades =
       await cidadeRepository.pegarCidades(idsDosEstados);
